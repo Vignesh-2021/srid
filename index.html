@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/ORGINAL.png">
+        </div>
+        <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <div class="search-button"><ion-icon name="search-outline"></ion-icon></div>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">service</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </nav>
+    <div class="top-bar">
+        <ul>
+            <li><a href="#">Earings</a></li>
+            <li><a href="#">Chains</a></li>
+            <li><a href="#">Bangles</a></li>
+            <li><a href="#">Mangalsutras</a></li>
+            <li><a href="#">Lockets</a></li>
+            <li><a href="#">Silver</a></li>
+            <li><a href="#">Gold rate</a></li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".toggle").on("click",function(){
+                if($(".menu").hasClass("active")){
+                 $(".menu").removeClass("active");  
+                 $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+                }else{
+                $(".menu").addClass("active"); 
+                $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>"); 
+                }
+            });
+        });
+    </script>
+</body>
+</html>

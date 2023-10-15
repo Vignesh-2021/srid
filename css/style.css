@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "popins",sans-serif;
+}
+
+nav{
+    background: #F3B9FF;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav a{
+    color: #530064;
+    text-decoration-line: none;
+}
+
+nav a:hover{
+    color:#ffff;
+
+}
+.search{
+    width: 600px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #530064;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.search input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #530064;
+}
+
+.search input::placeholder{
+    color: #530064;
+}
+.search-button{
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .logo img{
+    width: 250px;
+    margin-right: 10px;
+ }
+ .menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+ }
+ .menu li{
+    padding: 20px 10px;
+    font-size: 18px;
+   
+ }
+ .toggle{
+    display: none;
+    font-size: 20px;
+ }
+ .top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: #530064;
+ }
+ .top-bar ul{
+    list-style: none;
+    display: flex;
+ }
+ .top-bar li{
+    margin: 0px 30px;
+ }
+ .top-bar a{
+    color: #ffff;
+    text-decoration-line: none;
+ }
+ .top-bar a:hover{
+    color: #F3B9FF;
+ }
+ @media screen and (max-width: 600px) {
+    nav{
+        display: block;
+        position: relative;
+        padding: 15px 20px;
+        font-weight: 500;
+    }
+    .menu{
+        margin-top: 15px;
+        display: none;
+    }
+
+    .menu.active, .toggle{
+        display: block;
+    }
+    .toggle{
+        position: absolute;
+        font-size: 25px;
+        font-weight: 700;
+        top: 50px;
+        right: 20px;
+    }
+    .search input{
+        width:250px;
+        height: 40px;
+    }
+    .search{
+        width: 300px;
+        height: 35px;
+    }
+    .top-bar ul{
+        display: flex;
+        padding: 0 5px;
+        justify-content: space-between;
+        line-height: 50px;
+        flex-direction: column;
+    }
+ }
